@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{% block sonata_profile_title %}{% endblock sonata_profile_title %}{% endblock title %}
+
+{% block container %}
+    {% block container_div_start %}
+    <div class="{% block container_class %}container{% endblock container_class %}">
+    {% endblock container_div_start %}
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
+    {% block container_div_end %}
+    </div><!-- /container -->
+    {% endblock container_div_end %}
+{% endblock container %}

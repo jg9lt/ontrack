@@ -1,0 +1,8 @@
+# knp menu config
+knp_menu:
+    twig:
+        template: BraincraftedBootstrapBundle:Menu:bootstrap.html.twig
+
+    templating:         false
+
+    default_renderer:   twig

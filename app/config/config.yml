@@ -1,0 +1,75 @@
+imports:
+    - { resource: parameters.yml }
+
+    - { resource: security.yml }
+
+    - { resource: assetic/assetic.yml }
+
+    - { resource: twig/twig.yml }
+
+    - { resource: braincrafted/bootstrap.yml }
+
+    - { resource: doctrine/doctrine.yml }
+
+    - { resource: jms/aop.yml }
+
+    - { resource: fos/fos_user.yml }
+
+    - { resource: liip/imagine.yml }
+
+    - { resource: symfony/cmf_routing.yml }
+
+    - { resource: sonata/sonata_core.yml }
+    - { resource: sonata/sonata_block.yml }
+    - { resource: sonata/sonata_user.yml }
+    - { resource: sonata/sonata_media.yml }
+    - { resource: sonata/sonata_formatter.yml }
+    - { resource: sonata/sonata_page.yml }
+
+    - { resource: knp/knp_menu.yml }
+
+framework:
+    #esi:                     ~
+
+    translator:
+        fallback:             en
+
+    secret:                   "%secret%"
+
+    router:
+        resource:             "%kernel.root_dir%/config/routing.yml"
+        strict_requirements:  ~
+
+    form:                     true
+
+    csrf_protection:          true
+
+    validation:
+        enable_annotations:   true
+
+    templating:
+        engines:              ['twig']
+        #assets_version:      SomeVersionScheme
+
+    default_locale:           "%locale%"
+
+    trusted_hosts:            ~
+    trusted_proxies:          [127.0.0.1]
+
+    session:
+        save_path:            %kernel.root_dir%/cache/sessions
+
+    fragments:                ~
+
+    http_method_override:     true
+
+
+
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    spool:     { type: memory }

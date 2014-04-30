@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+
+    <services>
+        <service id="sonata.admin.job" class="Ldcrypto\OntrackBundle\Admin\JobAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Jobs" label="Job"/>
+            <argument />
+            <argument>Ldcrypto\OntrackBundle\Entity\Job</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>OntrackBundle</argument>
+            </call>
+        </service>
+        <service id="sonata.admin.customer" class="Ldcrypto\OntrackBundle\Admin\CustomerAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Customers" label="Customer"/>
+            <argument />
+            <argument>Ldcrypto\OntrackBundle\Entity\Customer</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>OntrackBundle</argument>
+            </call>
+        </service>
+        <service id="sonata.admin.sales_rep" class="Ldcrypto\OntrackBundle\Admin\SalesRepAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Sales Reps" label="Sales Rep"/>
+            <argument />
+            <argument>Ldcrypto\OntrackBundle\Entity\SalesRep</argument>
+            <argument />
+            <call method="setTranslationDomain">
+                <argument>OntrackBundle</argument>
+            </call>
+        </service>
+    </services>
+
+</container>

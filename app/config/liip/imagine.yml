@@ -1,0 +1,69 @@
+liip_imagine:
+    filter_sets:
+
+        # this configuration match the sonata_media configuration format definition
+        sonata_product_preview:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [100, 100], mode: outbound }
+
+        sonata_product_small:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [200, 100], mode: outbound }
+
+        sonata_product_large:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [600, 100], mode: outbound }
+
+        news_abstract:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [100, 100], mode: outbound }
+
+        news_wide:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [820, 100], mode: outbound }
+
+        sonata_collection_preview:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [100, 100], mode: outbound }
+
+        sonata_collection_wide:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [820, 100], mode: outbound }
+
+        sonata_category_preview:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [100, 100], mode: outbound }
+
+        sonata_category_wide:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [820, 100], mode: outbound }
+
+        default_small:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [100, 100], mode: outbound }
+
+        default_big:
+            quality: 75
+            controller_action: 'SonataMediaBundle:Media:liipImagineFilter'
+            filters:
+                thumbnail: { size: [820, 70], mode: outbound }

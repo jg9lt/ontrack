@@ -1,0 +1,3 @@
+ontrack_media:
+    resource:     Ldcrypto\OntrackBundle\Controller\MediaController
+    prefix:       /media

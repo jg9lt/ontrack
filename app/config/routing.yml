@@ -1,0 +1,16 @@
+# app/config/routing.yml
+ 
+_front:
+    resource:   routing_front.yml
+
+_admin:
+    resource:   routing_admin.yml
+    prefix:     /admin
+
+_api:
+    resource:   routing_api.yml
+    prefix:     /api
+
+_imagine:
+    resource:   .
+    type:       imagine
